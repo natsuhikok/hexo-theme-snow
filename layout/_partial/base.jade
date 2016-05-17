@@ -1,0 +1,13 @@
+doctype html
+html(lang="ja")
+  include head
+  body
+    header
+      h1
+        a(href=config.root)= config.title
+      p= config.subtitle
+    section
+      block page_contents
+    footer
+      h2 this is footer
+      a(href=url_for("archives")) Archive
