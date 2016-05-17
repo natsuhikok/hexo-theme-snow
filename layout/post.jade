@@ -1,0 +1,8 @@
+h1 #{page.title}
+p #{page.date.format(config.date_format)}
+- if (page.tags && page.tags.length) {
+- page.tags.each(function(tag){
+a(href="#{tag.path}") #{tag.name}
+- });
+- };
+!= page.content
