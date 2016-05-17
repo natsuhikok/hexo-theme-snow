@@ -1,1 +1,18 @@
-h1 this is test.
+- page.posts.each(function(post) {
+div
+	h2
+		a(href="#{post.path}") #{post.title}
+	!= post.excerpt
+	p #{post.date.format(config.date_format)}
+
+	- if (post.tags && post.tags.length) {
+		- post.tags.each(function(tag){
+		a(href="#{tag.path}") #{tag.name}
+		- });
+	- };
+
+	- if(post.excerpt) {
+	a(href="#{post.path}") 続きを読む
+	- };
+
+- });
