@@ -1,0 +1,50 @@
+///////////////////////////////////////
+// MIXIN
+///////////////////////////////////////
+// clearfix
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// toggle font-smoothing(on/off)
+@mixin font-smoothing($value) {
+   @if $value == on {
+       -webkit-font-smoothing: antialiased;
+       -moz-osx-font-smoothing: grayscale;
+   }
+   @else {
+       -webkit-font-smoothing: subpixel-antialiased;
+       -moz-osx-font-smoothing: auto;
+   }
+}
+
+// transition
+@mixin transition($duration) {
+  -webkit-transition: $duration;
+          transition: $duration;
+}
+
+// box-shadow
+@mixin box-shadow(
+  $offsetY, $offsetX, $gradation,
+  $color, $opacity
+  ) {
+  -webkit-box-shadow:
+  $offsetY $offsetX $gradation rgba($color, $opacity);
+  box-shadow:
+  $offsetY $offsetX $gradation rgba($color, $opacity);
+}
+
+// make element user-select none
+@mixin select-none() {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

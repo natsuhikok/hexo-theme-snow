@@ -1,0 +1,50 @@
+/*---------------------------------------/
+ * ARTICLE
+ * this is only for article.
+/---------------------------------------*/
+.article {
+  text-align: justify;
+  p {
+    font-size: $font_size02;
+    letter-spacing: 1px;
+    line-height: 42px;
+    margin: $margin_md 0 $margin_lg 0;
+  }
+  h2 {
+    font-size: $font_size04;
+    margin: $margin_xl 0 $margin_md 0;
+    padding-bottom: $margin_sm;
+    border-bottom: 1px solid $gray;
+  }
+  h3 {
+    font-size: $font_size03;
+    margin: $margin_lg 0 $margin_md 0;
+  }
+  ul {
+    margin: $margin_sm 0 $margin_md 0;
+    padding: 0 0 0 20px;
+    li {
+      font-size: $font_size02;
+      line-height: 2.2;
+    }
+  }
+  em {
+    font-style: normal;
+    font-size: $font_size02;
+    font-weight: bold;
+  }
+  code {
+    background-color: $gray;
+    padding:2px 4px;
+    margin: 0 3px;
+  }
+  hr {
+    border: 0;
+    border-bottom: 1px solid $gray;
+  }
+  blockquote {
+    border-left: 8px solid $gray;
+    padding-left: 10px;
+    font-style: italic;
+  }
+}
