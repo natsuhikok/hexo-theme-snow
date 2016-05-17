@@ -20,6 +20,8 @@
   "homepage": "https://bitbucket.org/natsuhikok/hexo-blog-my-theme#readme",
   "dependencies": {
     "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1"
   }
 }
