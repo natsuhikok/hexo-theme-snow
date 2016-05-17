@@ -3,11 +3,13 @@ html(lang="ja")
   include head
   body
     header
+      h2 this is header
       h1
         a(href=config.root)= config.title
       p= config.subtitle
     section
-      block page_contents
+      h2 this is contents
+      block site_content
     footer
       h2 this is footer
       a(href=url_for("archives")) Archive
