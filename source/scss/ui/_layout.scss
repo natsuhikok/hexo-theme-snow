@@ -2,12 +2,22 @@
  * LAYOUT
  * layout styles.
 /---------------------------------------*/
+$side_width: 200px;
 .l-main {
   background-color: $white;
   width: $max_width;
-  margin:auto;
+  margin: 0 auto 0 $side_width + 40;
 }
-
-.l-inner {
+.l-main--inner {
   padding: $margin_md $margin_xl;
+}
+.l-side {
+  background-color: $white;
+  width: $side_width;
+  height:100vh;
+  position: fixed;
+}
+.l-side--inner {
+  padding: $margin_xl 0 $margin_xl 34px;
+  height: 100%;
 }

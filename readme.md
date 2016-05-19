@@ -10,8 +10,8 @@ this is hexo blog theme.
 I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 
 ## TODO
-* Implement side bar
-* Add style into side bar
+* ~~Implement side bar~~
+* ~~Add style into side bar~~
 * Implement assets images
 * Add style into article header
 * Add style into index page
