@@ -1,0 +1,104 @@
+/*---------------------------------------/
+ * SIDE
+ * styles for side bar.
+/---------------------------------------*/
+.side-logo {
+  font-size: $font_size05;
+  & > a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.side-menu {
+  list-style-type: none;
+  margin: $margin_xl 0 0 0;
+  padding: 0;
+  li {
+    line-height: 42px;
+    font-size: $font_size02;
+  }
+}
+
+.side-foot {
+  position: absolute;
+  bottom: $margin_lg;
+}
+
+.side-sns {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  li {
+    display: inline-block;
+    width: 33.3333%;
+  }
+  a {
+    display: block;
+    position: relative;
+  }
+  a:hover {
+    .side-sns--caption {
+      display: block;
+    }
+  }
+}
+$icon-size: 32px;
+$icon-color: darken($gray,20%);
+%side-sns--icon {
+  @extend .fa;
+  @extend %transition;
+  line-height: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+  font-size: 19px;
+  color: $icon-color;
+  border: 2px solid $icon-color;
+  border-radius: 2px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top:-2px;
+    left: 6px;
+  }
+  &:hover {
+    color: $white;
+    border-color: $c-main;
+    background-color: $c-main;
+  }
+}
+.side-sns--caption {
+  font-size: 12px;
+  line-height: 1.6;
+  background-color: $black;
+  color: $white;
+  position: absolute;
+  top: -40px;
+  width: 70px;
+  display: none;
+  text-align: center;
+  left: (70 - $icon-size) * 0.5 * -1;
+  border-radius: 2px;
+  &::before {
+    content:"";
+    @include sankaku(6px, $black, "down");
+    position: absolute;
+    left: 30px;
+    bottom: -11px;
+  }
+}
+.side-sns--icon_twitter {
+  @extend %side-sns--icon;
+  @extend .fa-twitter;
+}
+.side-sns--icon_github {
+  @extend %side-sns--icon;
+  @extend .fa-github;
+}
+.side-sns--icon_instagram {
+  @extend %side-sns--icon;
+  @extend .fa-instagram;
+}
+.side-address {
+  font-size: $font_size01;
+}
