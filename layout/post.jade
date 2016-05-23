@@ -1,11 +1,12 @@
 .l-main
 	.l-main--inner
-		h1 #{page.title}
-		p #{page.date.format(config.date_format)}
-		- if (page.tags && page.tags.length) {
-		- page.tags.each(function(tag){
-		a(href="#{tag.path}") #{tag.name}
-		- });
-		- };
+		.postHeader
+			h1.postHeader--title #{page.title}
+			p.postHeader--date #{page.date.format(config.date_format)}
+			- if (page.tags && page.tags.length) {
+				- page.tags.each(function(tag){
+					a.postHeader--tag(href="#{tag.path}") #{tag.name}
+				- });
+			- };
 		article.article
 			!= page.content

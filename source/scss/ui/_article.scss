@@ -5,6 +5,7 @@
 $border-bottom-article: 1px solid darken($gray,10%);
 .article {
   text-align: justify;
+  margin: 0 $margin_lg + $margin_md;
   p {
     font-size: $font_size02;
     letter-spacing: 1px;
