@@ -8,6 +8,7 @@ html(lang='ja')
     meta(name="description", content="")
     link(rel="icon" href="favicon/favicon.ico")
     != css('css/all')
+    != open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus})
     body
       include _partial/side
       != body

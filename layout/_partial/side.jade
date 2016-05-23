@@ -12,21 +12,31 @@
 				a(href="#{config.root}") about
 		.side-foot
 			ul.side-sns
+				- if(theme.twitter) {
 				li
-					a(href="")
+					a(href="https://twitter.com/#{theme.twitter}")
 						p.side-sns--caption twitter
 						i.side-sns--icon_twitter
+				- };
+				- if(theme.github) {
 				li
-					a(href="")
+					a(href="https://github.com/#{theme.github}")
 						p.side-sns--caption github
 						i.side-sns--icon_github
+				- };
+				- if(theme.instagram) {
 				li
-					a(href="")
+					a(href="https://www.instagram.com/#{theme.instagram}")
 						p.side-sns--caption instagram
 						i.side-sns--icon_instagram
+				- };
 			p.side-address
 				| written by &nbsp;
-				a(href="https://twitter.com/hikonaz", target="_blank") @hikonaz
+				- if(theme.twitter) {
+				a(href="https://twitter.com/#{theme.twitter}", target="_blank") @#{theme.twitter}
+				- } else {
+				| #{config.author}
+				- }
 				br
 				| powered by &nbsp;
 				a(href="https://hexo.io", target="_blank") Hexo
