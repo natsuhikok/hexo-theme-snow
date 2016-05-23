@@ -18,8 +18,8 @@ I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 * Implement responsive style
 * Implement code highlighter
 * Implement archive page
-* Remove href from descriptions with js.
-* Create wrapper for postHeader link with js.
+* ~~Remove href from descriptions with js.~~
+* ~~Create wrapper for postHeader link with js.~~
 * Activate google_analytics.
 
 ## Reference

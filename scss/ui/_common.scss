@@ -16,6 +16,9 @@ a {
 %transition {
   @include transition(0.4s);
 }
+.box-href {
+  display: block;
+}
 
 /*---------------------------------------/
  * POST HEADER
@@ -23,7 +26,7 @@ a {
 /---------------------------------------*/
 %postHeader {
   margin: 0 $margin_lg;
-  padding: $margin_sm $margin_md;
+  padding: $margin_md;
   border-bottom: 1px dotted darken($gray,10%);
 }
 .postHeader {
@@ -37,10 +40,10 @@ a {
 }
 .postHeader--title {
   font-size: $font_size04;
-  margin: $margin_sm 0;
+  margin: 0;
   font-weight: normal;
 }
-.postHeader--desc * {
+.postHeader--desc {
   font-size: $font_size01;
   margin: $margin_xs 0 $margin_sm 0;
   color: lighten($black,20%);
@@ -52,9 +55,23 @@ a {
   padding:2px $margin_sm;
   margin-right:4px;
 }
+.postHeader--date_index {
+  @extend %postHeader-data;
+  padding: 0;
+  margin: 0;
+  color: lighten($black,20%);
+
+}
+.postHeader--tags {
+  position: absolute;
+  right:$margin_lg;
+  bottom: $margin_xs;
+  z-index: 1;
+}
 .postHeader--tag {
   @extend %postHeader-data;
   background-color: $white;
+  display: inline-block;
   color: $c-main;
   border: 1px solid $c-main;
   &:hover {
