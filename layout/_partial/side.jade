@@ -4,12 +4,10 @@
 		p.side-logo
 			a(href="#{config.root}") #{config.title}
 		ul.side-menu
-			li
-				a(href="#{config.root}") home
-			li
-				a(href="#{config.root}") archives
-			li
-				a(href="#{config.root}") about
+			- for (var i in theme.menu){
+				li
+					a(href="#{url_for(theme.menu[i])}") #{i}
+			- };
 		.side-foot
 			ul.side-sns
 				- if(theme.twitter) {

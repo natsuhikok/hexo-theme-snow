@@ -1,3 +1,8 @@
+menu:
+  home: /
+  archives: /archives
+  about:
+
 # Miscellaneous
 google_analytics: UA-XXXXXXXXXXXXXXX
 twitter: hikonaz
