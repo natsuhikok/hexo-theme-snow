@@ -30,6 +30,7 @@
   padding: 0;
   width: 100%;
   li {
+    text-align: center;
     display: inline-block;
     width: 33.3333%;
   }
@@ -101,4 +102,5 @@ $icon-color: darken($gray,20%);
 }
 .side-address {
   font-size: $font_size01;
+  text-align: center;
 }
