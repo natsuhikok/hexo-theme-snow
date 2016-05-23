@@ -1,11 +1,11 @@
 .l-main
 	.l-main--inner
 		.postHeader
-			h1.postHeader--title #{page.title}
 			p.postHeader--date #{page.date.format(config.date_format)}
+			h1.postHeader--title #{page.title}
 			- if (page.tags && page.tags.length) {
 				- page.tags.each(function(tag){
-					a.postHeader--tag(href="#{tag.path}") #{tag.name}
+					a.postHeader--tag(href="#{config.root}#{tag.path}") #{tag.name}
 				- });
 			- };
 		article.article

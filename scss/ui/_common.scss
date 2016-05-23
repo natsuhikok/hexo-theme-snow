@@ -51,11 +51,10 @@ a {
   font-style: normal;
 }
 %postHeader-data {
+  display: inline-block;
   font-size: $font_size01;
-  padding:2px $margin_sm;
-  margin-right:4px;
 }
-.postHeader--date_index {
+.postHeader--date {
   @extend %postHeader-data;
   padding: 0;
   margin: 0;
@@ -71,18 +70,12 @@ a {
 .postHeader--tag {
   @extend %postHeader-data;
   background-color: $white;
-  display: inline-block;
   color: $c-main;
   border: 1px solid $c-main;
+  padding:2px $margin_sm;
+  margin: $margin_sm 4px 0 0;
   &:hover {
     background-color: $c-main;
     color: $white;
   }
-}
-.postHeader--date {
-  background-color: $c-main;
-  color: $white;
-  border: 1px solid $c-main;
-  @extend %postHeader-data;
-  display: inline;
 }

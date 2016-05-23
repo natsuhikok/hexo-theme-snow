@@ -4,7 +4,7 @@
 		div
 			a(href="#{post.path}").box-href
 				.postHeader_index
-					p.postHeader--date_index #{post.date.format(config.date_format)}
+					p.postHeader--date #{post.date.format(config.date_format)}
 					h2.postHeader--title #{post.title}
 					p.postHeader--desc #{post.wrap_up}
 			- if (post.tags && post.tags.length) {
