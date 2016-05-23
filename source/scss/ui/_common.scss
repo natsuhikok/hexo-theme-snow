@@ -21,10 +21,16 @@ a {
  * POST HEADER
  * style in index posts and article header.
 /---------------------------------------*/
-.postHeader {
+%postHeader {
   margin: 0 $margin_lg;
   padding: $margin_sm $margin_md;
-  border-bottom: 1px dotted $gray;
+  border-bottom: 1px dotted darken($gray,10%);
+}
+.postHeader {
+  @extend %postHeader;
+}
+.postHeader_index {
+  @extend %postHeader;
   &:hover {
     background-color: lighten($gray,5%);
   }

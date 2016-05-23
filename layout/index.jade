@@ -1,7 +1,7 @@
 .l-main
 	.l-main--inner
 		- page.posts.each(function(post) {
-			.postHeader
+			.postHeader_index
 				h2.postHeader--title
 					a(href="#{post.path}") #{post.title}
 				p.postHeader--date #{post.date.format(config.date_format)}
