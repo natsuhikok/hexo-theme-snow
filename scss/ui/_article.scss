@@ -57,7 +57,7 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     font-weight: bold;
   }
   code {
-    background-color: $gray;
+    background-color: lighten($gray,2%);
     padding:2px 4px;
     margin: 0 3px;
   }
