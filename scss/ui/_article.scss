@@ -3,7 +3,13 @@
  * this is only for article.
 /---------------------------------------*/
 $border-bottom-article: 1px dotted darken($gray,10%);
+.article-hero {
+  width: 100%;
+  margin-top: -$margin_lg;
+  height: 230px;
+}
 .article {
+  background-color: $white;
   text-align: justify;
   margin: 0 $margin_lg + $margin_md;
   p {

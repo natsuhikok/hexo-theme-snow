@@ -1,5 +1,9 @@
 .l-main
 	.l-main--inner
+		- if (page.headimg) {
+			div.article-hero
+				img(src="#{page.headimg}")
+		- };
 		.postHeader
 			p.postHeader--date #{page.date.format(config.date_format)}
 			h1.postHeader--title #{page.title}
