@@ -20,7 +20,7 @@ gulp.task('watch', () => {
 /////////////////////////////////////////
 gulp.task('server', () => {
   browsersync({
-    files: "layout/**",
+    files: ["layout/**","source/js/**"],
     browser: 'FirefoxDeveloperEdition',
     proxy: "localhost:4000"
   });
