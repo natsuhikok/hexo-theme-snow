@@ -1,20 +1,3 @@
 .l-main
 	.l-main--inner
-		- page.posts.each(function(post) {
-		div
-			a(href="#{post.path}").box-href
-				.postHeader_index
-					- if(post.headimg){
-						img.postHeader--hero(src="#{post.headimg}")
-					- };
-					div.postHeader--content
-						p.postHeader--date #{post.date.format(config.date_format)}
-						h2.postHeader--title #{post.title}
-						p.postHeader--desc #{post.wrap_up}
-			- if (post.tags && post.tags.length) {
-				.postHeader--tags
-					- post.tags.each(function(tag){
-						a.postHeader--tag(href="#{tag.path}") #{tag.name}
-					- });
-			- };
-		- });
+		include _partial/list_post

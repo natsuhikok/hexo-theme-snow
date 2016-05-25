@@ -19,7 +19,15 @@ a {
 .box-href {
   display: block;
 }
-
+.post-list {
+  list-style-type: none;
+  margin: 0 $margin_lg + $margin_md;
+  padding: 0;
+  li {
+    font-size: $font_size03;
+    line-height: 2;
+  }
+}
 /*---------------------------------------/
  * POST HEADER
  * style in index posts and article header.
@@ -81,6 +89,15 @@ a {
   bottom: $margin_xs;
   z-index: 1;
 }
+.tag-list {
+  list-style-type: none;
+  margin: 0 $margin_lg + $margin_md $margin_md $margin_lg + $margin_md;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+}
+.tag-list-item a,
 .postHeader--tag {
   @extend %postHeader-data;
   background-color: $white;
