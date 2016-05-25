@@ -26,7 +26,6 @@ a {
 /---------------------------------------*/
 %postHeader {
   margin: 0 $margin_lg;
-  padding: $margin_md;
   border-bottom: 1px dotted darken($gray,10%);
 }
 .postHeader {
@@ -34,9 +33,24 @@ a {
 }
 .postHeader_index {
   @extend %postHeader;
-  &:hover {
-    background-color: lighten($gray,5%);
+  overflow: hidden;
+  .postHeader--content {
+    background-color: rgba($white,0.9);
   }
+  &:hover .postHeader--content {
+    background-color: rgba(lighten($gray,4%),0.9);
+  }
+}
+.postHeader--hero {
+  position: absolute;
+  z-index: 0;
+  widows: 100%;
+  padding-top: -$margin_md;
+}
+.postHeader--content {
+  @extend %transition;
+  z-index: 1;
+  padding: $margin_md;
 }
 .postHeader--title {
   font-size: $font_size04;

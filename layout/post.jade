@@ -5,12 +5,13 @@
 				img(src="#{page.headimg}")
 		- };
 		.postHeader
-			p.postHeader--date #{page.date.format(config.date_format)}
-			h1.postHeader--title #{page.title}
-			- if (page.tags && page.tags.length) {
-				- page.tags.each(function(tag){
-					a.postHeader--tag(href="#{config.root}#{tag.path}") #{tag.name}
-				- });
-			- };
+			.postHeader--content
+				p.postHeader--date #{page.date.format(config.date_format)}
+				h1.postHeader--title #{page.title}
+				- if (page.tags && page.tags.length) {
+					- page.tags.each(function(tag){
+						a.postHeader--tag(href="#{config.root}#{tag.path}") #{tag.name}
+					- });
+				- };
 		article.article
 			!= page.content
