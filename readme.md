@@ -5,6 +5,7 @@ this is hexo blog theme.
 
 ```
     "hexo-renderer-jade": "0.2.0"
+    "hexo-generator-sitemap": "^1.1.2"
 ```
 
 I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
@@ -21,10 +22,16 @@ I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 * ~~Implement archive page~~
 * ~~Remove href from descriptions with js.~~
 * ~~Create wrapper for postHeader link with js.~~
-* Activate google_analytics
+* ~~Activate google_analytics~~
 * Clean css
 * ~~Implement pager~~
-* Implement auto pager
+* ~~Implement auto pager~~
+* ~~Add style for next page button~~
+* ~~Implement title~~
+* ~~Implement meta description~~
+* ~~Create site map~~
+* Deploy
 
 ## Reference
 [Create an Hexo Theme](http://www.codeblocq.com/2016/03/Create-an-Hexo-Theme-Part-1-Index/)
+[Documentation | Hexo](https://hexo.io/docs/)
