@@ -5,8 +5,12 @@
 $side_width: 200px;
 .l-main {
   background-color: $white;
-  width: $max_width;
-  margin: 0 auto 0 $side_width + 40;
+  max-width: $max_width;
+  margin: 0 $margin_md 0 $side_width + $margin_md;
+  @media #{$md} {
+    width:100%;
+    margin:0;
+  }
 }
 .l-main--inner {
   padding: $margin_lg 0 $margin_xl 0;
@@ -16,6 +20,9 @@ $side_width: 200px;
   width: $side_width;
   height:100vh;
   position: fixed;
+  @media #{$md} {
+    display:none;
+  }
 }
 .l-side--inner {
   padding: $margin_xl 0 $margin_xl 34px;

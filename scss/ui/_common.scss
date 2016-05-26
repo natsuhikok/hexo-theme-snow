@@ -22,10 +22,16 @@ a {
 .post-list {
   list-style-type: none;
   margin: 0 $margin_lg + $margin_md;
+  @media #{$sm} {
+    margin: 0 $margin_sm;
+  }
   padding: 0;
   li {
     font-size: $font_size03;
     line-height: 2;
+    @media #{$sm} {
+      font-size: $font_size02;
+    }
   }
 }
 .btn-next {
@@ -49,6 +55,9 @@ a {
 %postHeader {
   margin: 0 $margin_lg;
   border-bottom: 1px dotted darken($gray,10%);
+  @media #{$sm} {
+    margin: 0;
+  }
 }
 .postHeader {
   @extend %postHeader;
@@ -66,19 +75,26 @@ a {
 .postHeader--hero {
   position: absolute;
   z-index: 0;
-  widows: 100%;
+  width: 100%;
+  height:100%;
   padding-top: -$margin_md;
 }
 .postHeader--content {
   @extend %transition;
   z-index: 1;
   padding: $margin_md;
+  @media #{$sm} {
+    padding:$margin_md;
+  }
 }
 .postHeader--title {
   font-size: $font_size04;
   margin: 0;
   font-weight: normal;
   color: $black;
+  @media #{$sm} {
+    font-size:$font_size03;
+  }
 }
 .postHeader--desc {
   font-size: $font_size01;
@@ -86,6 +102,9 @@ a {
   color: lighten($black,20%);
   font-weight: normal;
   font-style: normal;
+  @media #{$md} {
+    font-size:12px;
+  }
 }
 %postHeader-data {
   display: inline-block;
@@ -107,6 +126,9 @@ a {
 .tag-list {
   list-style-type: none;
   margin: 0 $margin_lg + $margin_md $margin_md $margin_lg + $margin_md;
+  @media #{$sm} {
+    margin: 0 $margin_sm $margin_sm $margin_sm;
+  }
   padding: 0;
   li {
     display: inline-block;

@@ -4,7 +4,7 @@ div.js-autopager-posts(data-next-page="#{page.next}")
 		a(href="#{config.root}#{post.path}").box-href
 			.postHeader_index
 				- if(post.headimg){
-				img.postHeader--hero(src="#{post.headimg}")
+				div.postHeader--hero(style="background-image:url(#{post.headimg})")
 				- };
 				div.postHeader--content
 					p.postHeader--date #{post.date.format(config.date_format)}

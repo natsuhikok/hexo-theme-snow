@@ -1,8 +1,7 @@
 .l-main
 	.l-main--inner
 		- if (page.headimg) {
-			div.article-hero
-				img(src="#{page.headimg}")
+			div.article-hero(style="background-image:url(#{page.headimg})")
 		- };
 		.postHeader
 			.postHeader--content
