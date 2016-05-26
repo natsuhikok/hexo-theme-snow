@@ -22,6 +22,11 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     letter-spacing: 1px;
     line-height: 42px;
     margin: $margin_md 0 $margin_lg 0;
+    @media #{$sm} {
+      font-size:$font_size01;
+      line-height:$font_size02 * 2.4;
+      margin: $margin_sm 0 $margin_md 0;
+    }
   }
   h2 {
     font-size: $font_size04;
@@ -29,6 +34,10 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     margin: $margin_xl 0 $margin_md 0;
     padding-bottom: $margin_sm;
     border-bottom: $border-bottom-article;
+    @media #{$sm} {
+      font-size:$font_size03;
+      margin: $margin_lg 0 $margin_sm 0;
+    }
   }
   h3 {
     font-size: $font_size03;
@@ -39,6 +48,10 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     margin: $margin_lg 0 0 0;
     & + * {
       margin-top: $margin_sm;
+    }
+    @media #{$sm} {
+      font-size:$font_size02;
+      margin: $margin_md 0 0 0;
     }
   }
   h4 {
@@ -52,24 +65,40 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     & + * {
       margin-top: $margin_sm;
     }
+    @media #{$sm} {
+      font-size:$font_size01+1;
+      margin: $margin_md 0 $margin_xs 0;
+    }
   }
   ul {
     margin: $margin_sm 0 $margin_md 0;
     padding: 0 0 0 20px;
+    @media #{$sm} {
+      margin-bottom: $margin_sm;
+    }
     li {
       font-size: $font_size02;
       line-height: 2.2;
+      @media #{$sm} {
+        font-size:$font_size01;
+      }
     }
   }
   em {
     font-style: normal;
     font-size: $font_size02;
     font-weight: bold;
+    @media #{$sm} {
+      font-size:$font_size01;
+    }
   }
   code {
     background-color: lighten($gray,2%);
     padding:2px 4px;
     margin: 0 3px;
+    @media #{$sm} {
+      font-size:$font_size01;
+    }
   }
   hr {
     border: 0;
@@ -79,5 +108,8 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     border-left: 8px solid $gray;
     padding-left: 10px;
     font-style: italic;
+    @media #{$sm} {
+      font-size:$font_size02;
+    }
   }
 }
