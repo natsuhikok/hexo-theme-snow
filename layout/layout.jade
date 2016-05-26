@@ -3,7 +3,19 @@ html(lang='ja')
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1.0")
-    title タイトル
+    /////////////////////////
+    // generate title
+    /////////////////////////
+    - if(page.title) {
+      - var this_title = page.title + " | " + config.title;
+    - } else if(is_archive()) {
+      - var this_title = "archive | " + config.title;
+    - } else if (is_tag()){
+      - var this_title = page.tag + " | " + config.title;
+    - } else {
+      - var this_title = config.title;
+    - }
+    title #{this_title}
     meta(name="description", content="")
     link(rel="icon", href="favicon/favicon.ico")
     != css('css/all')
