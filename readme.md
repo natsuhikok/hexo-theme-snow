@@ -23,7 +23,7 @@ I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 * ~~Create wrapper for postHeader link with js.~~
 * Activate google_analytics
 * Clean css
-* Implement page nation
+* ~~Implement pager~~
 * Implement auto pager
 
 ## Reference
