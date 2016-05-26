@@ -17,6 +17,13 @@
   li {
     line-height: 42px;
     font-size: $font_size02;
+    a {
+      color: $black;
+      display: block;
+      &:hover {
+        color: $c-main;
+      }
+    }
   }
 }
 
@@ -103,4 +110,10 @@ $icon-color: darken($gray,20%);
 .side-address {
   font-size: $font_size01;
   text-align: center;
+  a {
+    color: darken($black,20%);
+    &:hover {
+      color:$c-main;
+    }
+  }
 }
