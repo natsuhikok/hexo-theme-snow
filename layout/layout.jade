@@ -14,9 +14,14 @@ html(lang='ja')
       - var this_title = page.tag + " | " + config.title;
     - } else {
       - var this_title = config.title;
-    - }
+    - };
     title #{this_title}
-    meta(name="description", content="")
+    - if(page.description) {
+      - var this_desc = page.description;
+    - } else {
+      - var this_desc = config.description;
+    - };
+    meta(name="description", content="#{this_desc}")
     link(rel="icon", href="favicon/favicon.ico")
     != css('css/all')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
