@@ -21,10 +21,15 @@ $side_width: 200px;
   height:100vh;
   position: fixed;
   @media #{$md} {
-    display:none;
+    position: relative;
+    height: auto;
+    width: 100%;
   }
 }
 .l-side--inner {
   padding: $margin_xl 0 $margin_xl 34px;
   height: 100%;
+  @media #{$md} {
+    padding:0;
+  }
 }

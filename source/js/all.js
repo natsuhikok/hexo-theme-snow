@@ -37,4 +37,24 @@ $(function () {
     $.autopager('load');
     return false;
   });
+
+
+  //////////////////////////////////////////
+  // toggle MENU
+  //////////////////////////////////////////
+  var toggleMenu = function ($btn, $menu) {
+    var flag = false;
+    $btn.click(function () {
+      if (flag === false) {
+        $menu.slideDown();
+        $btn.removeClass('side--mobileBtn_open').addClass('side--mobileBtn_close');
+        flag = true;
+      } else {
+        $menu.slideUp();
+        $btn.removeClass('side--mobileBtn_close').addClass('side--mobileBtn_open');
+        flag = false;
+      }
+    });
+  };
+  toggleMenu($('.js-toggle-btn'),$('.js-toggle-menu'));
 });
