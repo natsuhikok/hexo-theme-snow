@@ -28,6 +28,20 @@ a {
     line-height: 2;
   }
 }
+.btn-next {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  color: $white;
+  line-height: 2.8;
+  background-color: $black;
+  &:hover {
+    color: $white;
+    background-color: darken($black,10%);
+  }
+}
 /*---------------------------------------/
  * POST HEADER
  * style in index posts and article header.
