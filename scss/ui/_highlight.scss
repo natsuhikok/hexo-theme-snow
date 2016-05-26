@@ -7,12 +7,23 @@
   margin: $margin_lg 0;
   line-height: 1.8;
   font-size: $font_size02;
+  overflow:auto;
+  @media #{$sm} {
+    font-size:$font_size01;
+  }
 }
 .highlight pre {
   margin: $margin_sm 0;
+  overflow:auto;
 }
-.highlight table {
-  margin-top: $margin_md;
+figcaption + table pre {
+  margin-top: 4px !important;
+}
+figcaption {
+  background-color:darken($gray,30%);
+  padding:0 $margin_md;
+  color:$white;
+  display:inline-block;
 }
 .gutter {
   padding: 0 $margin_sm;
