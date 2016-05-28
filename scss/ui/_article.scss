@@ -21,11 +21,14 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     font-size: $font_size02;
     letter-spacing: 1px;
     line-height: 42px;
-    margin: $margin_md 0 $margin_lg 0;
+    margin: $margin_md 0 $margin_md 0;
     @media #{$sm} {
       font-size:$font_size01;
       line-height:$font_size02 * 2.4;
       margin: $margin_sm 0 $margin_md 0;
+    }
+    & + p {
+      margin-top: $margin_lg;
     }
   }
   h2 {
@@ -70,7 +73,7 @@ $border-bottom-article: 1px dotted darken($gray,10%);
       margin: $margin_md 0 $margin_xs 0;
     }
   }
-  ul {
+  ul,ol {
     margin: $margin_sm 0 $margin_md 0;
     padding: 0 0 0 20px;
     @media #{$sm} {
