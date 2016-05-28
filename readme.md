@@ -8,7 +8,7 @@ this is hexo blog theme.
     "hexo-generator-sitemap": "^1.1.2"
 ```
 
-I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
+I'm using `hexo-renderer-jade` `v0.2`, cause 'v0.3` is not working with livereload.
 
 ## TODO
 * ~~Implement side bar~~
@@ -16,7 +16,7 @@ I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 * ~~Implement assets images~~
 * ~~Add style into article header~~
 * ~~Add style into index page~~
-* Implement responsive style
+* ~~Implement responsive style~~
 * ~~Add archive pages' map~~
 * ~~Implement code highlighter~~
 * ~~Implement archive page~~
@@ -30,8 +30,9 @@ I'm using `hexo-renderer-jade` `v0.2`, couse 'v0.3` is not working livereload.
 * ~~Implement title~~
 * ~~Implement meta description~~
 * ~~Create site map~~
+* Add author info in article footer
+* Make this public theme
 * Deploy
 
 ## Reference
-[Create an Hexo Theme](http://www.codeblocq.com/2016/03/Create-an-Hexo-Theme-Part-1-Index/)
 [Documentation | Hexo](https://hexo.io/docs/)
