@@ -30,6 +30,7 @@ I'm using `hexo-renderer-jade` `v0.2`, cause 'v0.3` is not working with liverelo
 * ~~Implement title~~
 * ~~Implement meta description~~
 * ~~Create site map~~
+* Change japanese fonts
 * Add author info in article footer
 * Make this public theme
 * Deploy
