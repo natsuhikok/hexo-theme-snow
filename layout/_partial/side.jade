@@ -1,29 +1,42 @@
 .l-side
 	.l-side--inner
-		i.test
-		p.side-logo
-			a(href="#{config.root}") #{config.title}
-		ul.side-menu
-			li
-				a(href="#{config.root}") home
-			li
-				a(href="#{config.root}") archives
-			li
-				a(href="#{config.root}") about
-		.side-foot
-			ul.side-sns
-				li
-					a(href="")
-						p.side-sns--caption twitter
-						i.side-sns--icon_twitter
-				li
-					a(href="")
-						p.side-sns--caption github
-						i.side-sns--icon_github
-				li
-					a(href="")
-						p.side-sns--caption instagram
-						i.side-sns--icon_instagram
-			p.side-address
-				| powered by &nbsp;
-				a(href="https://hexo.io", target="_blank") Hexo
+		.side-title
+			i.side--mobileBtn.js-toggle-btn.side--mobileBtn_open
+			p.side-logo
+				a(href="#{config.root}") #{config.title}
+		.side-content.js-toggle-menu
+			ul.side-menu
+				- for (var i in theme.menu){
+					li
+						a(href="#{url_for(theme.menu[i])}") #{i}
+				- };
+			.side-foot
+				ul.side-sns
+					- if(theme.twitter) {
+					li
+						a(href="https://twitter.com/#{theme.twitter}", target="_blank")
+							p.side-sns--caption twitter
+							i.side-sns--icon_twitter
+					- };
+					- if(theme.github) {
+					li
+						a(href="https://github.com/#{theme.github}", target="_blank")
+							p.side-sns--caption github
+							i.side-sns--icon_github
+					- };
+					- if(theme.instagram) {
+					li
+						a(href="https://www.instagram.com/#{theme.instagram}", target="_blank")
+							p.side-sns--caption instagram
+							i.side-sns--icon_instagram
+					- };
+				p.side-address
+					| written by &nbsp;
+					- if(theme.twitter) {
+					a(href="https://twitter.com/#{theme.twitter}", target="_blank") @#{theme.twitter}
+					- } else {
+					| #{config.author}
+					- }
+					br
+					| powered by &nbsp;
+					a(href="https://hexo.io", target="_blank") Hexo

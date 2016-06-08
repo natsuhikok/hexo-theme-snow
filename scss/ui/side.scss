@@ -1,0 +1,210 @@
+/*---------------------------------------/
+ * SIDE
+ * styles for side bar.
+/---------------------------------------*/
+.side-title {
+  position: absolute;
+  z-index:4;
+  @media #{$md} {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 0 $margin_lg;
+    @include box-shadow(3px,3px,2px,$gray,0.4);
+    background-color: $black;
+  }
+  @media #{$sm} {
+    padding: 0 $margin_md;
+  }
+}
+.side--mobileBtn {
+  @extend .fa;
+  float: right;
+  font-size: 32px;
+  display: none;
+  margin-top: $margin_xs + 2;
+  color: $white;
+  @media #{$md} {
+    display: block;
+  }
+
+  &_open {
+    @extend .fa-th-large;
+  }
+  &_close {
+    @extend .fa-close;
+  }
+}
+.side-logo {
+  font-size: $font_size05;
+  & > a {
+    color: $black;
+    text-decoration: none;
+  }
+  @media #{$md} {
+    margin:$margin_xs + 2 $margin_md;
+    font-size: $font_size04;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.side-content {
+  height:100%;
+  @media #{$md} {
+    z-index: 2;
+    background-color: $black;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top:46px;
+    display: none;
+  }
+}
+.side-menu {
+  list-style-type: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  position: absolute;
+  top:18vh;
+  li {
+    line-height: 42px;
+    font-size: $font_size02;
+    a {
+      color: $black;
+      display: block;
+      &:hover {
+        color: $c-main;
+      }
+    }
+  }
+  @media #{$md} {
+    position: relative;
+    top:auto;
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 33.333%;
+      border: 1px solid $white;
+    }
+    li a {
+      color: $white;
+    }
+  }
+}
+
+.side-foot {
+  position: absolute;
+  bottom: -1 * $margin_lg;
+  @media #{$md} {
+    position: relative;
+    bottom: auto;
+  }
+}
+
+.side-sns {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  li {
+    text-align: center;
+    display: inline-block;
+    width: 33.3333%;
+  }
+  a {
+    display: block;
+    position: relative;
+    @media #{$md} {
+      display: inline-block;
+    }
+  }
+  a:hover {
+    .side-sns--caption {
+      display: block;
+    }
+  }
+  @media #{$md} {
+    margin: $margin_md * 1.5 0;
+  }
+}
+$icon-size: 32px;
+$icon-color: darken($gray,20%);
+%side-sns--icon {
+  @extend .fa;
+  @extend %transition;
+  line-height: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+  font-size: 19px;
+  color: $icon-color;
+  border: 2px solid $icon-color;
+  border-radius: 2px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top:-2px;
+    left: 6px;
+  }
+  &:hover {
+    color: $white;
+    border-color: $c-main;
+    background-color: $c-main;
+  }
+}
+.side-sns--caption {
+  font-size: 12px;
+  line-height: 1.6;
+  background-color: $black;
+  color: $white;
+  @media #{$md} {
+    background-color: $white;
+    color: $c-main;
+  }
+  position: absolute;
+  top: -40px;
+  width: 70px;
+  display: none;
+  text-align: center;
+  left: (70 - $icon-size) * 0.5 * -1;
+  border-radius: 2px;
+  &::before {
+    content:"";
+    @include sankaku(6px, $black, "down");
+    position: absolute;
+    left: 30px;
+    bottom: -11px;
+    @media #{$md} {
+      @include sankaku(6px, $white, "down");
+    }
+  }
+}
+.side-sns--icon_twitter {
+  @extend %side-sns--icon;
+  @extend .fa-twitter;
+}
+.side-sns--icon_github {
+  @extend %side-sns--icon;
+  @extend .fa-github;
+}
+.side-sns--icon_instagram {
+  @extend %side-sns--icon;
+  @extend .fa-instagram;
+}
+.side-address {
+  font-size: $font_size01;
+  text-align: center;
+  @media #{$md} {
+    color: $white;
+  }
+  a {
+    color: darken($black,20%);
+    &:hover {
+      color:$c-main;
+    }
+  }
+  @media #{$md} {
+    a {color: $gray;}
+  }
+}

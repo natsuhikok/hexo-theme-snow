@@ -3,11 +3,32 @@ html(lang='ja')
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width,initial-scale=1.0")
-
-    title タイトル
-    meta(name="description", content="")
-    link(rel="icon" href="favicon/favicon.ico")
+    /////////////////////////
+    // generate title
+    /////////////////////////
+    - if(page.title) {
+      - var this_title = page.title + " | " + config.title;
+    - } else if(is_archive()) {
+      - var this_title = "archive | " + config.title;
+    - } else if (is_tag()){
+      - var this_title = page.tag + " | " + config.title;
+    - } else {
+      - var this_title = config.title;
+    - };
+    title #{this_title}
+    - if(page.description) {
+      - var this_desc = page.description;
+    - } else {
+      - var this_desc = config.description;
+    - };
+    meta(name="description", content="#{this_desc}")
+    link(rel="icon", href="favicon/favicon.ico")
     != css('css/all')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js")
+    != js('js/autopager')
+    != js('js/all')
+    != open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus})
     body
       include _partial/side
       != body
+      include _partial/google_analytics

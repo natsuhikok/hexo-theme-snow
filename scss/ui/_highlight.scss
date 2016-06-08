@@ -1,0 +1,72 @@
+/*---------------------------------------/
+ * HIGHLIGHT
+ * styles code highlight.
+/---------------------------------------*/
+.highlight {
+  background-color: lighten($gray,2%);
+  margin: $margin_md 0;
+  line-height: 1.8;
+  font-size: $font_size02;
+  overflow:auto;
+  @media #{$sm} {
+    font-size:$font_size01;
+  }
+}
+.highlight pre {
+  margin: $margin_sm 0;
+  overflow:auto;
+}
+figcaption + table pre {
+  margin-top: 4px !important;
+}
+figcaption {
+  background-color:darken($gray,30%);
+  padding:0 $margin_md;
+  color:$white;
+  display:inline-block;
+}
+.gutter {
+  padding: 0 $margin_sm;
+  border-right: 2px solid $white;
+  text-align: right;
+  display: inline-block;
+  color: lighten($black,30%);
+}
+$code_c1: #00897B;
+$code_c2: #1E88E5;
+$code_c3: #F4511E;
+$code_c4: #8E24AA;
+$code_c5: #e53935;
+.code {
+  padding: 0 0 0 $margin_xs;
+
+  .comment, .template_comment, .diff .header, .doctype, .pi, .lisp .string, .javadoc
+   {
+    font-style: italic;
+    color: lighten($black,30%);
+  }
+
+  .keyword, .winutils, .method, .addition, .css .tag, .request, .status, .nginx .title {
+    color: $code_c2;
+  }
+
+  .string, .number, .command, .tag .value, .phpdoc, .tex .formula, .regexp, .hexcolor {
+    color: $code_c1;
+  }
+
+  .title, .localvars, .chunk, .decorator, .built_in, .identifier, .vhdl, .literal, .id {
+    color: $code_c5;
+  }
+
+  .attribute, .variable, .lisp .body, .smalltalk .number, .constant, .class .title, .parent, .haskell .type {
+    color: $code_c4;
+  }
+
+  .preprocessor, .preprocessor .keyword, .shebang, .symbol, .symbol .string, .diff .change, .special, .attr_selector, .important, .subst, .cdata, .clojure .title {
+    color: $code_c3;
+  }
+
+  .deletion {
+    color: $code_c5;
+  }
+}

@@ -12,13 +12,28 @@ $sub_width:  800px;
 $black:  #585858;
 $white:  white;
 $gray:   #eee;
-$c-main: #1565C0;
+$c-main: #1E88E5;//600
 
 //-------------------------------------
 // Fonts
 //-------------------------------------
 @import url(https://fonts.googleapis.com/css?family=Lato:400);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: normal;
+  src: url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff2) format('woff2'),
+  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff) format('woff'),
+  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: bold;
+  src: url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff2) format('woff2'),
+  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff) format('woff'),
+  url(//fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.otf) format('opentype');
+}
 $font_family:'Lato', Helvetica, 'Noto Sans Japanese', "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 
 // base font size

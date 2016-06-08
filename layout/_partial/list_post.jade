@@ -1,0 +1,19 @@
+div.js-autopager-posts(data-next-page="#{page.next}")
+	- page.posts.each(function(post) {
+	div
+		a(href="#{config.root}#{post.path}").box-href
+			.postHeader_index
+				- if(post.headimg){
+				div.postHeader--hero(style="background-image:url(#{post.headimg})")
+				- };
+				div.postHeader--content
+					p.postHeader--date #{post.date.format(config.date_format)}
+					h2.postHeader--title #{post.title}
+					p.postHeader--desc #{post.description}
+		- if (post.tags && post.tags.length) {
+		.postHeader--tags
+			- post.tags.each(function(tag){
+			a.postHeader--tag(href="#{config.root}#{tag.path}") #{tag.name}
+			- });
+		- };
+	- });

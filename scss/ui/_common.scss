@@ -1,0 +1,149 @@
+/*---------------------------------------/
+ * COMMON
+ * common styles, such as body backgrounds.
+/---------------------------------------*/
+body {
+  background-color: $gray;
+}
+a {
+  color: $c-main;
+  text-decoration: none;
+  @extend %transition;
+  &:hover {
+    color: lighten($c-main,10%);
+  }
+}
+%transition {
+  @include transition(0.4s);
+}
+.box-href {
+  display: block;
+}
+.post-list {
+  list-style-type: none;
+  margin: 0 $margin_lg + $margin_md;
+  @media #{$sm} {
+    margin: 0 $margin_sm;
+  }
+  padding: 0;
+  li {
+    font-size: $font_size03;
+    line-height: 2;
+    @media #{$sm} {
+      font-size: $font_size02;
+    }
+  }
+}
+.btn-next {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  color: $white;
+  line-height: 2.8;
+  background-color: $black;
+  &:hover {
+    color: $white;
+    background-color: darken($black,10%);
+  }
+}
+/*---------------------------------------/
+ * POST HEADER
+ * style in index posts and article header.
+/---------------------------------------*/
+%postHeader {
+  margin: 0 $margin_lg;
+  border-bottom: 1px dotted darken($gray,10%);
+  @media #{$sm} {
+    margin: 0;
+  }
+}
+.postHeader {
+  @extend %postHeader;
+}
+.postHeader_index {
+  @extend %postHeader;
+  overflow: hidden;
+  .postHeader--content {
+    background-color: rgba($white,0.9);
+  }
+  &:hover .postHeader--content {
+    background-color: rgba(lighten($gray,4%),0.9);
+  }
+}
+.postHeader--hero {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height:100%;
+  padding-top: -$margin_md;
+}
+.postHeader--content {
+  @extend %transition;
+  z-index: 1;
+  padding: $margin_md;
+  @media #{$sm} {
+    padding:$margin_md;
+  }
+}
+.postHeader--title {
+  font-size: $font_size04;
+  margin: 0;
+  font-weight: normal;
+  color: $black;
+  @media #{$sm} {
+    font-size:$font_size03;
+  }
+}
+.postHeader--desc {
+  font-size: $font_size01;
+  margin: $margin_xs 0 $margin_sm 0;
+  color: lighten($black,20%);
+  font-weight: normal;
+  font-style: normal;
+  @media #{$md} {
+    font-size:12px;
+  }
+}
+%postHeader-data {
+  display: inline-block;
+  font-size: $font_size01;
+}
+.postHeader--date {
+  @extend %postHeader-data;
+  padding: 0;
+  margin: 0;
+  color: lighten($black,20%);
+
+}
+.postHeader--tags {
+  position: absolute;
+  right:$margin_lg;
+  bottom: $margin_xs;
+  z-index: 1;
+}
+.tag-list {
+  list-style-type: none;
+  margin: 0 $margin_lg + $margin_md $margin_md $margin_lg + $margin_md;
+  @media #{$sm} {
+    margin: 0 $margin_sm $margin_sm $margin_sm;
+  }
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+}
+.tag-list-item a,
+.postHeader--tag {
+  @extend %postHeader-data;
+  background-color: $white;
+  color: $c-main;
+  border: 1px solid $c-main;
+  padding:2px $margin_sm;
+  margin: $margin_sm 4px 0 0;
+  &:hover {
+    background-color: $c-main;
+    color: $white;
+  }
+}
