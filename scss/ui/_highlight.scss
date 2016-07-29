@@ -38,7 +38,7 @@ $code_c3: #F4511E;
 $code_c4: #8E24AA;
 $code_c5: #e53935;
 .code {
-  padding: 0 0 0 $margin_xs;
+  padding:  0 $margin_xs;
 
   .comment, .template_comment, .diff .header, .doctype, .pi, .lisp .string, .javadoc
    {
