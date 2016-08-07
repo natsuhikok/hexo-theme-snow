@@ -1,15 +1,8 @@
 {
-  "name": "hexo-blog-my-theme",
-  "version": "1.0.0",
+  "name": "simple-white-jp",
+  "version": "0.5.0",
   "description": "this is theme for hexo blog.",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://natsuhikok@bitbucket.org/natsuhikok/hexo-blog-my-theme.git"
-  },
   "keywords": [
     "hexo",
     "blog",
@@ -17,7 +10,6 @@
   ],
   "author": "KATO natsuhiko",
   "license": "yet",
-  "homepage": "https://bitbucket.org/natsuhikok/hexo-blog-my-theme#readme",
   "dependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
