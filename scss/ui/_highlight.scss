@@ -5,16 +5,19 @@
 .highlight {
   background-color: lighten($gray,2%);
   margin: $margin_md 0;
-  line-height: 1.8;
+  line-height: 1.6;
   font-size: $font_size02;
   overflow:auto;
   @media #{$sm} {
     font-size:$font_size01;
   }
 }
+.highlight table {
+  width: 100%;
+}
 .highlight pre {
-  margin: $margin_sm 0;
   overflow:auto;
+  margin: 0;
 }
 figcaption + table pre {
   margin-top: 4px !important;
@@ -38,7 +41,7 @@ $code_c3: #F4511E;
 $code_c4: #8E24AA;
 $code_c5: #e53935;
 .code {
-  padding:  0 $margin_xs;
+  padding: $margin_sm;
 
   .comment, .template_comment, .diff .header, .doctype, .pi, .lisp .string, .javadoc
    {
