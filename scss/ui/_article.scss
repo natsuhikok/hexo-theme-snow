@@ -96,7 +96,8 @@ $border-bottom-article: 1px dotted darken($gray,10%);
     }
   }
   pre, code {
-    font-family: $font_family;
+    font-family: $font_family_code;
+    @include font-smoothing(off);
   }
   code {
     background-color: lighten($gray,2%);

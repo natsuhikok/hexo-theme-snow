@@ -122,6 +122,11 @@ a {
   right:$margin_lg;
   bottom: $margin_xs;
   z-index: 1;
+  @media #{$sm} {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
 }
 .tag-list {
   list-style-type: none;

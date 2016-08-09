@@ -1,4 +1,14 @@
 $(function () {
+  var fontsConfig = {
+    google: {
+      families: ['Lato:400']
+    },
+    custom: {
+        families: ['Noto Sans JP']
+    },
+    timeout: 1500
+  };
+  WebFont.load(fontsConfig);
   //////////////////////////////////////////
   // Active tags
   //////////////////////////////////////////
