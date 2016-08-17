@@ -1,5 +1,5 @@
 # Hexo blog theme
-this is hexo blog theme. Live (demo)[http://hikonaz.com].
+this is hexo blog theme. [Live demo](http://hikonaz.com).
 WIP as public theme.
 
 ## requirement
