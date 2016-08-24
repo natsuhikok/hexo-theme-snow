@@ -6,10 +6,14 @@ WIP as public theme.
 
 ```
     "hexo-renderer-jade": "0.2.0"
-    "hexo-generator-sitemap": "^1.1.2"
 ```
 
-I'm using `hexo-renderer-jade` `v0.2`, cause `v0.3` is not working with livereload.
+Using `hexo-renderer-jade` `v0.2`, cause `v0.3` is not working with livereload.
+
+## note
+
+* style for codeblock with line number is broken.
+
 
 ## Reference
 [Documentation | Hexo](https://hexo.io/docs/)
